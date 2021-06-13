@@ -17,7 +17,7 @@ gallery.insertAdjacentHTML('afterbegin', galleryItem);
 gallery.addEventListener('click', openImage);
 lightboxButton.addEventListener('click', closeImage);
 lightboxOverlay.addEventListener('click', closeImage);
-lightboxImage.addEventListener('keyup', closeEsc);
+window.addEventListener('keyup', closeEsc);
 
 
 function openImage(event) {
@@ -32,3 +32,8 @@ function closeImage(event) {
    lightboxImage.setAttribute('alt', "");
 };
 
+function closeEsc({ key }) {
+   if (key === "Escape") {
+      closeImage()
+   };
+}
