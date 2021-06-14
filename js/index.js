@@ -58,8 +58,8 @@ function slider(event) {
 
 function swipeLeft(galleryItems) {
          for (let index = 0; index < galleryItems.length; index++) {
-            const elementGalery = galleryItems[index];
-            if (elementGalery.original === lightboxImage.getAttribute("src")&& index !==0) {
+            const elementGallery = galleryItems[index];
+            if (elementGallery.original === lightboxImage.getAttribute("src")&& index !==0) {
              lightboxImage.setAttribute('src', galleryItems[(index - 1)].original);
              lightboxImage.setAttribute('alt', galleryItems[(index - 1)].description);  
             };
@@ -69,8 +69,8 @@ function swipeLeft(galleryItems) {
 
 function swipeRight(galleryItems) {
          for (let index = 0; index < galleryItems.length; index++) {
-            const elementGalery = galleryItems[index];
-            if (elementGalery.original === lightboxImage.getAttribute("src")&& index !== (galleryItems.length -1)) {
+            const elementGallery = galleryItems[index];
+            if (elementGallery.original === lightboxImage.getAttribute("src")&& index !== (galleryItems.length -1)) {
             lightboxImage.setAttribute('src', galleryItems[(index + 1)].original);
             lightboxImage.setAttribute('alt', galleryItems[(index + 1)].description);
                break;
